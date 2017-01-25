@@ -1,0 +1,15 @@
+RewriteEngine on
+
+# remove traling slash
+RewriteRule ^(.*)/$ /excalibur/$1 [L,R=301]
+
+redirectMatch 301 ^/excalibur/console$ /excalibur/console/login.php
+
+# remove file extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# use routes.php file to make content
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . routes.php [L]
