@@ -10,7 +10,7 @@ define('PASSWORD', '');
 define('DATABASE', 'db_excalibur');
 define('DOMAIN', 'http://localhost/excalibur');
 define('SMTP_HOST', 'smtp.livemail.co.uk');
-define('COMPANY_NAME', 'Excalibur');
+define('COMPANY_NAME', 'Excalibur Improvement Systems Ltd');
 define('SMTP_USERNAME', 'alexe@wts-group.com');
 define('SMTP_EMAIL', 'alexe@wts-group.com');
 define('SMTP_PASSWORD', 'roses111!');
@@ -22,7 +22,7 @@ define('DT', date('Y-m-d H:i:s'));
 
 $user = new App\User;
 //$cartObj = new App\Cart;
-//$subCategoryObj = new App\SubCategory;
+$categoryObj = new App\Category;
 
 
 if( !$user->uniqueId() ){

@@ -1,7 +1,5 @@
 <?php
 
-require __DIR__.'/includes/config.php';
-
 use App\Blog;
 use App\BlogImage;
 

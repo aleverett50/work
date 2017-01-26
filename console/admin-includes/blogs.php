@@ -32,7 +32,7 @@ if( count($blogObj->getAll()) ){
 	
 	foreach( $blogObj->getAll() as $row ){
 	
-	print '<tr><td>'.date('d.m.Y', strtotime($row->created_at)).'</td><td>'.$row->title.'</td><td>/blog/'.$row->seo_url.'</td><td><a class="btn btn-primary" href="account.php?page=blog&action=edit&id='.$row->id.'">Edit <i class="fa fa-edit"></i></a> <a class="btn btn-primary" href="account.php?page=blogs&action=delete&id='.$row->id.'">Delete <i class="fa fa-remove"></i></a></td></tr>';
+	print '<tr><td>'.date('d.m.Y', strtotime($row->created_at)).'</td><td>'.$row->title.'</td><td>/blog/'.$row->seo_url.'</td><td><a class="btn btn-primary" href="account.php?page=blog&action=edit&id='.$row->id.'">Edit <i class="fa fa-edit"></i></a> <a onclick="return confirm(\'Are you sure you want to delete this post? \')" class="btn btn-primary" href="account.php?page=blogs&action=delete&id='.$row->id.'">Delete <i class="fa fa-remove"></i></a></td></tr>';
 	
 	}
 	

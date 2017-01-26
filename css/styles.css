@@ -5,6 +5,8 @@ body{
 	
 	}
 	
+	.font-bigger{ font-size:18px }
+	
 .r{ background:#FF0000 !important } /* red bg for debugging div backgrounds don't remove */
 .g{ background:#008000 !important } /* green bg for debugging div backgrounds don't remove */
 .b{ background:#0000FF !important } /* blue bg for debugging div backgrounds don't remove */
@@ -26,7 +28,12 @@ body{
 
 .icon-bar{ background:#fff !important }
 .navbar-toggle{ background:#009CD9 }
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{ background:#009CD9 }
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	
+	background:#009CD9;
+
+	
+	}
 
 .col-md-12.bg-secondary-colour, .col-md-12.bg-main-colour{ height:155px }
 .handshake-image{ margin-top:35px }
@@ -184,7 +191,15 @@ body{
 	
 }
 
-.navbar-default{background-color:#009CD9; border:0}
+.navbar-default{
+	background-color:#009CD9;
+	border:0;
+    background: -webkit-linear-gradient(#04BAFF, #009CD9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#04BAFF, #009CD9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#04BAFF, #009CD9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#04BAFF, #009CD9); /* Standard syntax */
+}
+
 .need-help-div{ padding-top:18px }
 .top-bar{ background:#009CD9;height:5px }
 .social-media-div{ padding-top:10px }
@@ -233,12 +248,29 @@ h1{ font-weight:bold;color:#CFDC34;font-size:25px;margin-top:20px }
 .not-visible{ visibility:hidden }
 a{ color:#009CD9 }
 a:hover{ color:#009CD9;text-decoration:underline }
-input[type=text], textarea{ border-radius:0 !important }
+input[type=text], textarea, select{ border-radius:0 !important }
 .btn-default{ background: #CFDC34; border:0; color:#fff; border-radius:0;margin-top:20px }
-.btn-default:hover{ background:#C9D625;color:#fff }
+.btn-default:hover, .btn-default:active, .btn-default:focus{ background:#C9D625 !important;color:#fff !important }
 .green-block-size{ min-height:90px }
 .bg-secondary-colour{ background: #CFDC34 }
-.bg-main-colour{ background: #009CD9 }
+.bg-main-colour{
+
+	background:#009CD9;
+    background: -webkit-linear-gradient(#04BAFF, #009CD9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#04BAFF, #009CD9); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#04BAFF, #009CD9); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#04BAFF, #009CD9); /* Standard syntax */
+	
+}
+
+.bg-secondary-colour{
+
+	background: #CFDC34;
+	
+}
+
+.bg-main-colour-no-gradient{ background:#009CD9 !important; }
+
 .coloured-box-h3{ font-size:28px;font-style:italic;margin-top:5px;color:#fff }
 
 
@@ -275,7 +307,15 @@ input[type=text], textarea{ border-radius:0 !important }
 	
 	}
 
+.panel-default{
 
+border: solid 1px #eeeeee;
+ box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ -moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+ -o-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	
+}
 
 
 

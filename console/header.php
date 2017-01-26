@@ -58,6 +58,7 @@ $(function(){
 									<li><a href="<?= DOMAIN;  ?>/console/account.php?page=categories">Categories</a></li>
 									<li><a href="<?= DOMAIN;  ?>/console/account.php?page=products">Products</a></li>
 									<li><a href="<?= DOMAIN;  ?>/console/account.php?page=blogs">Blog Posts</a></li>
+									<li><a href="<?= DOMAIN;  ?>/console/account.php?page=gallery&action=add">Gallery</a></li>
 									<li><a href="<?= DOMAIN;  ?>/console/account.php?page=change-password">Change Password</a></li>
 									<li><a href="<?= DOMAIN;  ?>/console/login.php?log=out">Logout</a></li>
 								</ul>

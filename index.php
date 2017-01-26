@@ -29,7 +29,10 @@ require 'header.php';
 				
 			</div>
 			
-			<div class="col-md-6"></div>
+			<div class="col-md-6">
+
+			
+			</div>
 		
 		</div>
 
@@ -52,11 +55,11 @@ require 'header.php';
 		
 		<div class="col-md-4 col-md-offset-1 pt-70">
 		
-			<div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i style="vertical-align:middle" class="fa fa-gbp fa-2x"></i> </div> Get a FREE quote   <i class="fa fa-chevron-right pull-right mt-5"></i> </div>
-			
-			<div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i style="vertical-align:middle" class="fa fa-comments fa-2x"></i> </div> Book an appointment   <i class="fa fa-chevron-right pull-right mt-5"></i> </div>
-			
-			<div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i style="vertical-align:middle" class="fa fa-book fa-2x"></i> </div>  Request a brochure <i class="fa fa-chevron-right pull-right mt-5"></i> </div>
+<a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i style="vertical-align:middle" class="fa fa-gbp fa-2x"></i> </div> Get a FREE quote   <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a>
+
+<a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i style="vertical-align:middle" class="fa fa-comments fa-2x"></i> </div> Book an appointment   <i class="fa fa-chevron-right pull-right mt-5"></i> </div></a>
+
+<a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i style="vertical-align:middle" class="fa fa-book fa-2x"></i> </div>  Request a brochure <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a>
 		
 		</div>
 	
@@ -70,9 +73,9 @@ require 'header.php';
 
 	<div class="row">
 	
-		<div class="col-md-4 col-sm-4 mb-30">  <img alt="Windows" class="img-responsive" src="<?= DOMAIN ?>/images/windows.jpg"> <a href="<?= DOMAIN ?>/" class="btn btn-default green-block bg-green">Windows</a> </div>
-		<div class="col-md-4 col-sm-4 mb-30">  <img alt="Doors" class="img-responsive" src="<?= DOMAIN ?>/images/doors.jpg"> <a href="<?= DOMAIN ?>/" class="btn btn-default green-block bg-green">Doors</a> </div>
-		<div class="col-md-4 col-sm-4 mb-30">  <img alt="Fascias &amp; Soffits" class="img-responsive" src="<?= DOMAIN ?>/images/fascias-soffits.jpg"> <a href="<?= DOMAIN ?>/" class="btn btn-default green-block bg-green">Fascias &amp; Soffits</a> </div>
+		<div class="col-md-4 col-sm-4 mb-30">  <img alt="Windows" class="img-responsive center-block" src="<?= DOMAIN ?>/images/windows.jpg"> <a href="<?= DOMAIN ?>/" class="btn btn-default green-block bg-green">Windows</a> </div>
+		<div class="col-md-4 col-sm-4 mb-30">  <img alt="Doors" class="img-responsive center-block" src="<?= DOMAIN ?>/images/doors.jpg"> <a href="<?= DOMAIN ?>/" class="btn btn-default green-block bg-green">Doors</a> </div>
+		<div class="col-md-4 col-sm-4 mb-30">  <img alt="Fascias &amp; Soffits" class="img-responsive center-block" src="<?= DOMAIN ?>/images/fascias-soffits.jpg"> <a href="<?= DOMAIN ?>/" class="btn btn-default green-block bg-green">Fascias &amp; Soffits</a> </div>
 	
 	</div>
 
@@ -119,7 +122,7 @@ require 'header.php';
 
 	<div class="row">
 	
-		<div class="col-md-4 col-sm-4 mb-30">  
+		<div class="col-md-4 col-sm-4 mb-20">  
 		
 			<div class="col-md-12 bg-secondary-colour">
 			
@@ -139,9 +142,9 @@ require 'header.php';
 			
 		</div>
 
-		<div class="col-md-4 col-sm-4 mb-30">  
+		<div class="col-md-4 col-sm-4 mb-20">  
 		
-			<div class="col-md-12 bg-main-colour">
+			<div class="col-md-12 bg-main-colour bg-main-colour-no-gradient">
 			
 				<div class="row">
 
@@ -159,7 +162,7 @@ require 'header.php';
 			
 		</div>
 		
-		<div class="col-md-4 col-sm-4 mb-30">  
+		<div class="col-md-4 col-sm-4 mb-20">  
 		
 			<div class="col-md-12 bg-secondary-colour">
 			

@@ -2,8 +2,6 @@
 
 namespace App\Helpers;
 
-use App\BlogImage;
-
 class Tools
 {
 
@@ -205,7 +203,7 @@ class Tools
 
 				if(empty($size)){
 				
-					return redirect( $_SERVER['REQUEST_URI'], 'You must upload a valid image', 'e' );
+					return redirect( $_SERVER['REQUEST_URI'], 'You tried to upload an invalid image', 'e' );
 				
 				}
 
@@ -248,12 +246,16 @@ class Tools
     
     public static function updateImages( $id, $image_folder, $obj )
     {
+   
+	/* Set uploaded array as empty array */
+    
+	$uploadedArray = [];
     
 	/*  See if any images exist first. If they do update the alt tags and update the image if one has been uploaded  */
 	
 	foreach($_POST as $key => $value){
 	
-		if( strstr($key, 'id') ){
+		if( strstr($key, 'id-') ){
 		
 			$file_num = str_replace('id-', '', $key);
 			

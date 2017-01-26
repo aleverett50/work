@@ -69,12 +69,11 @@ tinymce.init({
   plugins: "code"
 });
 
-
 </script>
 
 <h1>BLOG</h1>
 
-<p>Once uploaded, to delete an image, just click it.</p>
+<p>Once uploaded, to delete the image, just click it.</p>
 
 	<form enctype="multipart/form-data" class="form-horizontal" <?php if($action == 'add'){ print 'id="form"'; } ?> method="post" action="">
 
@@ -105,10 +104,10 @@ tinymce.init({
 									</div>
 								</div>
 								
-								<?php for($i = 1; $i < 3; $i++){ ?>
+								<?php for($i = 1; $i < 2; $i++){ ?>
 								
 								<div class="form-group">
-									<label class="col-md-4 control-label">Alt Tag <?= $i; ?></label>
+									<label class="col-md-4 control-label">Alt Tag</label>
 									<div class="col-md-6">
 										<input type="text" class="form-control" id="alt-<?= $i; ?>" name="alt-<?= $i; ?>" value="<?php if(isset($blog_images[$i-1]->alt)){ print $blog_images[$i-1]->alt; } ?>">										
 									</div>
@@ -122,7 +121,7 @@ tinymce.init({
 								<?php } ?>
 								
 								<div class="form-group">
-									<label class="col-md-4 control-label">Image <?= $i; ?> (JPG, PNG or GIF)</label>
+									<label class="col-md-4 control-label">Image (JPG, PNG or GIF)</label>
 									<div class="col-md-6">
 										<input type="file" class="form-control" name="file-<?= $i; ?>">
 										

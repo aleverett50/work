@@ -9,7 +9,9 @@ redirectMatch 301 ^/excalibur/console$ /excalibur/console/login.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 
-# use routes.php file to make content
+Redirect 301 /excalibur/index /excalibur/
+
+# use routes.php file to make content if filename doesn't exist
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . routes.php [L]

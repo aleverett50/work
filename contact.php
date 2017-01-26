@@ -1,6 +1,15 @@
 <?php
 
 require __DIR__.'/includes/config.php';
+
+use App\Helpers\Mail;
+
+if( isset($_POST['name']) ){
+
+	Mail::enquiry();
+
+}
+
 require 'header.php';
 
 ?>
@@ -16,9 +25,17 @@ require 'header.php';
 
 <div class="container">
 
+<?php require __DIR__.'/includes/flash-messages.php'; ?>
+
+<p class="mb-30">If you would contact us please give us a call. Alternatively you can send us a message via email or by using our web form.</p>
+
 	<div class="row">
 	
 		<div class="col-md-6">
+		
+	  <div class="panel panel-default">
+
+    <div class="panel-body" >
 
             <form action="" method="post">
               <div class="form-group">
@@ -45,13 +62,13 @@ require 'header.php';
                 </label>
                 <textarea placeholder="" rows="3" name="message" class="form-control"></textarea>
               </div>
-              <button class="btn btn-default" type="submit">
-                SUBMIT ENQUIRY
-              </button>
+              <button class="btn btn-default font-bigger" type="submit">SUBMIT ENQUIRY</button>
             </form>
 			
 			
-			</form>
+	</div>
+	
+	</div>
 		
 		</div>
 

@@ -9,6 +9,15 @@
 <meta name="description" content="" />
 <script src="<?= DOMAIN ?>/js/jquery-1.11.3.min.js"></script>
 <script src="<?= DOMAIN ?>/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="<?= DOMAIN ?>/lightbox/dist/css/lightbox.css">
+<script src="<?= DOMAIN ?>/lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
+<script src="<?= DOMAIN ?>/js/jquery.matchHeight-min.js"></script>
+<script src="<?= DOMAIN ?>/js/jquery.countdown.js"></script>
+<script>setTimeout(function() {
+  $(".alert-success").fadeTo(500, 0).slideUp(500, function(){
+    $(this).remove();
+  });
+}, 3000); </script>
 </head>
 <body>
 
@@ -57,19 +66,23 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="link"><a href="<?= DOMAIN ?>/#"><i class="fa fa-home"></i> HOME</a></li>
+            <li class="link"><a href="<?= DOMAIN ?>/index"><i class="fa fa-home"></i> HOME</a></li>
 
             <li class="link"><a href="<?= DOMAIN ?>/why-us">WHY US</a></li>
 
             <li class="dropdown link">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
               <ul class="dropdown-menu">
-                <li><a href="<?= DOMAIN ?>/#">WINDOWS</a></li>
-                <li><a href="<?= DOMAIN ?>/#">DOORS</a></li>
+	      <?php foreach( $categoryObj->getAll() as $category ){ ?>
+	      
+	      <li><a href="<?= DOMAIN ?>/<?= strtolower($category->seo_url) ?>"><?= strtoupper($category->title) ?></a></li>
+	      
+	     <?php } ?>
+
               </ul>
             </li>
 
-	<li class="link"><a href="<?= DOMAIN ?>/contact">GALLERY</a></li>
+	<li class="link"><a href="<?= DOMAIN ?>/gallery">GALLERY</a></li>
 
 	<li class="link"><a href="<?= DOMAIN ?>/blog">BLOG</a></li>
 

@@ -10,9 +10,9 @@ class Mail
 
 	$message = self::emailHeader().$message.self::emailFooter();
 
-	require_once(dirname(__FILE__)."../../includes/class.phpmailer.php");
+		require __DIR__.'/../../includes/class.phpmailer.php';
 
-		$mail = new PHPMailer();
+		$mail = new \PHPMailer();
 		
 		if($_SERVER['HTTP_HOST'] == "localhost"){
 		
@@ -40,8 +40,17 @@ class Mail
     {
 
 	$message = "You have an enquiry.<br /><br />Name: ".$_POST['name']."<br />Phone: ".$_POST['phone']."<br />Email: ".$_POST['email']."<br />Message: ".$_POST['message'];
-	self::send('info@', $message, 'Enquiry Form', COMPANY_NAME);
-	return redirect( 'contact.php', 'Thank you, your enquiry has been sent!' );
+	self::send('alexe@wts-group.com', $message, 'Enquiry Form', COMPANY_NAME);
+	return redirect( 'contact', 'Thank you, your enquiry has been sent' );
+
+    }
+    
+    public static function request()
+    {
+
+	$message = "You have a request from...<br /><br />Title: ".$_POST['title']."<br />Surname: ".$_POST['surname']."<br />Email: ".$_POST['email']."<br />Phone: ".$_POST['phone']."<br />Address: ".$_POST['address'];
+	self::send('alexe@wts-group.com', $message, 'Website Request', COMPANY_NAME);
+	return redirect( 'request', 'Thank you, your request has been sent' );
 
     }
     
@@ -50,8 +59,8 @@ class Mail
     {
 
 	$message = "You have a newsletter sign up.<br /><br />Email: ".$_POST['email_subscribe'];
-	self::send('info@', $message, 'Newsletter Sign Up', COMPANY_NAME);
-	return redirect( 'contact.php', 'Thank you, you have been added to our mailing list!' );
+	self::send('alexe@wts-group.com', $message, 'Newsletter Sign Up', COMPANY_NAME);
+	return redirect( 'contact', 'Thank you, you have been added to our mailing list' );
 
     }
 
@@ -59,7 +68,7 @@ class Mail
     public static function emailHeader()
     {
 
-	return "<div style='width:700px;height:auto;'><div style='width:100%;float:left;margin-bottom:10px'><img title='".COMPANY_NAME."' alt='".COMPANY_NAME."' style='width:150px;float:left;' src='".DOMAIN."/images/logo.jpg'></div><div style='float:left;width:100%;height:3px; background:".MAIN_COLOUR.";margin-bottom:20px'></div><br />";
+	return "<div style='width:700px;height:auto;'><div style='width:100%;float:left;margin-bottom:10px'><img title='".COMPANY_NAME."' alt='".COMPANY_NAME."' width='200' src='".DOMAIN."/images/logo.jpg'></div><div style='float:left;width:100%;height:3px; background:#009CD9;margin-bottom:20px'></div><br />";
 
     }
 
@@ -67,7 +76,7 @@ class Mail
     public static function emailFooter()
     {
 
-	return "<br /><br /><br /><br />Thanks<br /><br />".COMPANY_NAME." <br />Address<br />Stanningley<br />Leeds<br />LS11 1AA<br /><br />Phone: 0113 111 2233<br />General enquiries: <a href='mailto:info@'>info@</a><br />Returns enquiries: <a href='mailto:returns@'>returns@</a><br /><div style='float:left;width:100%;height:3px; background:".MAIN_COLOUR.";margin-top:20px'></div></div>";
+	return "<br /><br /><br /><br />Thanks<br /><br />".COMPANY_NAME." <br />Unit 2, 75 Spen Lane<br />Leeds<br />LS16 5EL<br /><br /><div style='float:left;width:100%;height:3px; background:#009CD9;margin-top:20px'></div></div>";
 
     }
 

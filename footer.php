@@ -5,9 +5,9 @@
 
 	<div class="row">
 	
-		<div class="col-md-4"> <div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-gbp fa-2x"></i> </div> Get a FREE quote   <i class="fa fa-chevron-right pull-right mt-5"></i> </div>  </div>
-		<div class="col-md-4">  <div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-comments fa-2x"></i> </div> Book an appointment   <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </div>
-		<div class="col-md-4">  <div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-book fa-2x"></i> </div>  Request a brochure <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </div>
+		<div class="col-md-4"> <a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-gbp fa-2x"></i> </div> Get a FREE quote   <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a> </div>
+		<div class="col-md-4">  <a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-comments fa-2x"></i> </div> Book an appointment   <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a> </div>
+		<div class="col-md-4">  <a href="<?= DOMAIN ?>/request"><div class="bar bg-main-colour"> <div class="green-circle bg-secondary-colour">  <i class="fa fa-book fa-2x"></i> </div>  Request a brochure <i class="fa fa-chevron-right pull-right mt-5"></i> </div> </a></div>
 	
 	</div>
 		
@@ -78,7 +78,7 @@
 	
 	<div class="row">
 	
-		<div class="col-md-6 col-xs-12 pull-right text-left website-design-by">  Copyright <?= date('Y') ?> Excalibur Improvement Systems &copy; <a href="<?= DOMAIN ?>/http://www.wtstechnologies.co.uk">Web Design</a> by WTS Technologies </div>
+		<div class="col-md-6 col-xs-12 pull-right text-left website-design-by">  Copyright <?= date('Y') ?> Excalibur Improvement Systems Ltd &copy; <a href="<?= DOMAIN ?>/http://www.wtstechnologies.co.uk">Web Design</a> by WTS Technologies </div>
 	
 	</div>
 

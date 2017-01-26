@@ -45,12 +45,11 @@ class Product extends ObjectModel{
     }
     
 
-    public function getAllBySubCategory($subCategoryId)
+    public function getAllByCategory($categoryId)
     {
 
 	return $this->execute("SELECT * FROM products WHERE 
-					sub_category_id = ? AND products.deleted_at IS NULL 
-					ORDER BY products.product_code ASC ", [$subCategoryId] );		
+					category_id = ? AND products.deleted_at IS NULL ", [$categoryId] );		
 
     }
 		

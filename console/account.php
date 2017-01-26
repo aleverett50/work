@@ -67,10 +67,6 @@ print json_encode($results); exit;
 			include('admin-includes/gallery.php');
 			break;
 			
-			case 'add-gallery':
-			include('admin-includes/add-gallery.php');
-			break;
-			
 			case 'customer':
 			include('admin-includes/customer.php');
 			break;
