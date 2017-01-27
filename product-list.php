@@ -1,8 +1,10 @@
 <?php
 
 use App\Product;
+use App\ProductImage;
 
 $productObj = new Product;
+$productImageObj = new ProductImage;
 
 require 'header.php';
 
@@ -27,11 +29,17 @@ $(function() {
 
         <div class="row">
 	
-	<?php foreach( $productObj->getAllByCategory($category_id) as $product ){ ?>
+	<?php
+	
+	foreach( $productObj->getAllByCategory($category_id) as $product ){
+	
+	$row = $productImageObj->getRowByField('product_id', $product->id);
+	
+	?>
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb mb-30 image-col">
-                <a class="thumbnail" href="">
-                    <img class="img-responsive" src="" alt="">
+                <a class="thumbnail" href="<?= DOMAIN ?>/product/<?= $product->seo_url ?>">
+                    <img class="img-responsive" src="<?= DOMAIN ?>/product-images/<?= $row->id ?>.<?= $row->ext ?>" alt="<?= $row->alt ?>">
                 </a>
 		
 	<h4 class="text-center"><?= $product->title ?></h4>

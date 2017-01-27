@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <head>
-<title>Home</title>
+<title><?= isset($meta_title) ? $meta_title : 'Excalibur Improvement Systems Ltd, Windows, Doors, Fascias & Soffits ' ?></title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="<?= DOMAIN ?>/css/bootstrap.min.css" />
+<link href="<?= DOMAIN ?>/css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
 <link rel="stylesheet" type="text/css" href="<?= DOMAIN ?>/css/styles.css" />
 <link rel="stylesheet" type="text/css" href="<?= DOMAIN ?>/font-awesome/css/font-awesome.css" />
-<meta name="description" content="" />
+<meta name="description" content="<?= isset($meta_description) ? $meta_description : 'Excalibur offers bespoke Windows, Doors, Fascias & Soffits at excellent prices. See our full range online.' ?>" />
 <script src="<?= DOMAIN ?>/js/jquery-1.11.3.min.js"></script>
-<script src="<?= DOMAIN ?>/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="<?= DOMAIN ?>/lightbox/dist/css/lightbox.css">
 <script src="<?= DOMAIN ?>/lightbox/dist/js/lightbox-plus-jquery.min.js"></script>
 <script src="<?= DOMAIN ?>/js/jquery.matchHeight-min.js"></script>
@@ -18,6 +18,8 @@
     $(this).remove();
   });
 }, 3000); </script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+<script src="<?= DOMAIN ?>/js/bootstrap.min.js"></script>
 </head>
 <body>
 

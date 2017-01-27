@@ -9,7 +9,7 @@ if( strstr($url, 'blog/') ){
 	include('blog-page.php');
 	exit;
 
-} elseif(strstr($url, 'products/')){
+} elseif(strstr($url, 'product/')){
 
 	include('product-details-page.php');
 	exit;

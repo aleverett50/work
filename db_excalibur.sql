@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2017 at 06:16 PM
+-- Generation Time: Jan 27, 2017 at 05:38 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -147,8 +147,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `category_id`, `title`, `seo_url`, `price`, `description`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 6, 'Product Title', 'product-title', '10.00', '<p>desc</p>', '2017-01-10 15:12:10', '2017-01-26 17:03:47', NULL),
-(3, 2, 'Second Product', 'second-product', '0.00', 'xxs', '2017-01-10 15:41:23', '2017-01-10 16:19:50', NULL),
+(2, 6, 'Product Title', 'product-title', '10.00', '<p>desc</p>', '2017-01-10 15:12:10', '2017-01-26 17:21:51', NULL),
+(3, 2, 'Second Product', 'second-product', '0.00', '<p>xxs</p>', '2017-01-10 15:41:23', '2017-01-27 09:27:47', NULL),
 (4, 6, 'p', 'p', '10.00', '<p>s</p>', '2017-01-26 10:56:46', '2017-01-26 11:01:28', '2017-01-26 11:01:28'),
 (5, 6, 'asdasd', 'asd', '0.00', '<p>asd</p>', '2017-01-26 10:58:31', '2017-01-26 11:00:37', '2017-01-26 11:00:37');
 
@@ -175,7 +175,10 @@ CREATE TABLE `product_images` (
 INSERT INTO `product_images` (`id`, `product_id`, `alt`, `ext`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (2, 4, 'aaa', 'jpg', '2017-01-26 10:57:51', '2017-01-26 10:58:14', NULL),
 (3, 4, 'aas', 'jpg', '2017-01-26 10:58:07', '2017-01-26 10:58:14', NULL),
-(4, 5, 's', 'jpg', '2017-01-26 10:58:31', '2017-01-26 10:58:31', NULL);
+(4, 5, 's', 'jpg', '2017-01-26 10:58:31', '2017-01-26 10:58:31', NULL),
+(5, 2, 'title', 'jpg', '2017-01-26 17:21:51', '2017-01-26 17:21:51', NULL),
+(6, 2, 'title 2', 'jpg', '2017-01-26 17:21:51', '2017-01-26 17:21:51', NULL),
+(7, 3, 'alt 1', 'jpg', '2017-01-27 09:27:47', '2017-01-27 09:27:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -307,7 +310,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `users`
 --
